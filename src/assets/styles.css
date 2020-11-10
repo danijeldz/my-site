@@ -1,0 +1,21 @@
+/* FONTS */
+.yanone {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.roboto {
+	font-family: "Roboto", sans-serif;
+}
+
+/* NAVIGATION */
+.v-toolbar__title a {
+	text-decoration: none;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 2rem;
+}
+
+.v-toolbar__items .v-btn__content {
+	font-family: "Roboto", sans-serif;
+	text-transform: capitalize;
+	color: #1976d2;
+}
