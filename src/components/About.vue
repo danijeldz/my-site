@@ -74,7 +74,7 @@
 														href="https://github.com/danijeldz/"
 														target="_blank"
 													>
-														<v-icon color="white"
+														<v-icon color="accent"
 															>mdi-github</v-icon
 														>
 													</v-btn>
@@ -116,7 +116,9 @@
 											<v-card-title
 												>Experience</v-card-title
 											>
-											<v-divider></v-divider>
+											<v-divider
+												color="white"
+											></v-divider>
 											<v-list-item>
 												<v-list-item-content
 													class="info--text"
@@ -191,7 +193,9 @@
 												<v-card-title
 													>Tech stack</v-card-title
 												>
-												<v-divider></v-divider>
+												<v-divider
+													color="white"
+												></v-divider>
 												<v-card-text
 													>Vue.js, ES6, HTML, CSS,
 													GraphQL, Firebase, Vuetify,
@@ -204,7 +208,9 @@
 												<v-card-title
 													>Education</v-card-title
 												>
-												<v-divider></v-divider>
+												<v-divider
+													color="white"
+												></v-divider>
 												<v-list-item>
 													<v-list-item-content
 														class="info--text"

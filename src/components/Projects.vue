@@ -15,12 +15,16 @@
 				>
 					<v-card
 						color="info"
-						v-for="(project, index) in projects"
-						:key="index"
+						v-for="project in $static.project.edges"
+						:key="project.node.id"
 						class="mb-4 d-flex d-flex-row"
 					>
 						<v-avatar size="100" class="ma-3" tile>
-							<v-img :src="project.coverImage"></v-img>
+							<v-img
+								:src="project.node.coverImage.file.url"
+								:alt="project.node.coverImage.title"
+								:title="project.node.coverImage.description"
+							></v-img>
 						</v-avatar>
 						<div
 							class="d-flex justify-space-between flex-column flex-grow-1"
@@ -30,20 +34,20 @@
 								v-text="project.title"
 							></v-card-title> -->
 							<div
-								v-text="project.title"
+								v-text="project.node.title"
 								class="subtitle-1 ml-2 mt-2"
 							></div>
 
 							<div class="ml-2">
 								<p
-									v-text="project.description"
+									v-text="project.node.description"
 									class="mb-0"
 								></p>
 								<v-chip
 									x-small
 									outlined
 									class="mr-1"
-									v-for="(tag, index) in project.stack"
+									v-for="(tag, index) in project.node.stack"
 									:key="index"
 									>{{ tag }}
 								</v-chip>
@@ -54,7 +58,7 @@
 									x-small
 									depressed
 									elevation="1"
-									:href="project.demo"
+									:href="project.node.demo"
 									target="_blank"
 									color="success"
 								>
@@ -65,7 +69,7 @@
 									color="blue-grey darken-3"
 									class="white--text"
 									x-small
-									:href="project.repo"
+									:href="project.node.repo"
 									target="_blank"
 								>
 									<v-icon small class="mr-1"
@@ -130,3 +134,27 @@ export default {
 	min-height: 50ch;
 }
 </style>
+
+<static-query>
+query {
+  project: allContentfulProject {
+    edges {
+      node {
+        id
+        title
+        description
+        demo
+        repo
+		stack
+        coverImage {
+          title
+          description
+          file {
+            url
+          }
+        }
+      }
+    }
+  }
+}
+</static-query>

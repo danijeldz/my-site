@@ -17,7 +17,7 @@
 					class="mx-3"
 					target="_blank"
 				>
-					<v-icon color="info">mdi-github</v-icon>
+					<v-icon color="accent">mdi-github</v-icon>
 				</v-btn>
 				<v-btn
 					fab
