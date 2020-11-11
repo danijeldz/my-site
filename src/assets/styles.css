@@ -1,4 +1,29 @@
 /* FONTS */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+h1 {
+	font-size: 2.75rem;
+}
+h2 {
+	font-size: 2.25rem;
+}
+h3 {
+	font-size: 1.75rem;
+}
+h4 {
+	font-size: 1.2rem;
+}
+h5 {
+	font-size: 1rem;
+}
+h6 {
+	font-size: 0.75rem;
+}
 .yanone {
 	font-family: "Yanone Kaffeesatz", sans-serif;
 }
@@ -8,6 +33,12 @@
 }
 
 /* NAVIGATION */
+
+.v-toolbar__content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .v-toolbar__title a {
 	text-decoration: none;
 	font-family: "Yanone Kaffeesatz", sans-serif;
@@ -17,5 +48,11 @@
 .v-toolbar__items .v-btn__content {
 	font-family: "Roboto", sans-serif;
 	text-transform: capitalize;
-	color: #1976d2;
+}
+
+/* Layout */
+
+.home_section {
+	min-height: 50vh;
+	padding: 2em 0;
 }

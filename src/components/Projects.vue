@@ -1,13 +1,20 @@
 <template>
-	<section id="sectionProjects">
+	<section id="sectionProjects" class="home_section info--text primary">
 		<v-container>
 			<v-row>
 				<v-col cols="12" class="text-center">
 					<h1>My Projects</h1>
 				</v-col>
-				<v-col sm="12" sm-offset="0" md="6" offset-md="3">
+				<v-col
+					cols="12"
+					offset="0"
+					sm="12"
+					sm-offset="0"
+					md="6"
+					offset-md="3"
+				>
 					<v-card
-						color="grey lighten-5"
+						color="info"
 						v-for="(project, index) in projects"
 						:key="index"
 						class="mb-4 d-flex d-flex-row"
@@ -49,13 +56,13 @@
 									elevation="1"
 									:href="project.demo"
 									target="_blank"
-									color="teal lighten-2"
+									color="success"
 								>
 									<v-icon small class="mr-1">mdi-play</v-icon>
 									Demo</v-btn
 								>
 								<v-btn
-									color="blue-grey darken-1"
+									color="blue-grey darken-3"
 									class="white--text"
 									x-small
 									:href="project.repo"
@@ -121,6 +128,5 @@ export default {
 <style>
 #sectionProjects {
 	min-height: 50ch;
-	border: 1px solid yellow;
 }
 </style>

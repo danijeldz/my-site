@@ -30,9 +30,10 @@
 				</v-list-item-group>
 			</v-list>
 		</v-navigation-drawer>
-		<v-app-bar app dark elevate-on-scroll>
-			<v-toolbar-title class="d-md-flex">
-				<g-link to="/" class="">
+
+		<v-app-bar app elevate-on-scroll color="primary darken-1">
+			<v-toolbar-title class="d-md-flex align-center">
+				<g-link to="/" class="d-flex align-center info--text">
 					<span class="font-weight-light">Danijel</span>
 					<span class="font-weight-medium">Džankić</span>
 				</g-link>
@@ -41,22 +42,27 @@
 			<v-spacer></v-spacer>
 
 			<v-toolbar-items class="d-none d-md-flex text-capitalize">
-				<v-btn to="/blog" text class="text-capitalize"> Blog </v-btn>
-				<v-btn text class="text-capitalize" to="/about-me/">
+				<v-btn text class="text-capitalize info--text" to="/"
+					>Home</v-btn
+				>
+				<v-btn to="/blog" text class="text-capitalize info--text"
+					>Blog</v-btn
+				>
+				<v-btn text class="text-capitalize info--text" to="/cv/">
 					<!-- <g-link to="/about-me/">About Me</g-link> -->
-					About Me
+					CV
 				</v-btn>
 				<v-btn
 					@click="scrollRouter('#sectionProjects')"
 					text
-					class="text-capitalize"
+					class="text-capitalize info--text"
 				>
 					Code
 				</v-btn>
 				<v-btn
 					@click="scrollRouter('#sectionContact')"
 					text
-					class="text-capitalize"
+					class="text-capitalize info--text"
 				>
 					Contact
 				</v-btn>

@@ -16,8 +16,25 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 		rel: "stylesheet",
 		href: "https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap",
 	})
+	const opts = {
+		iconfont: "md",
+		theme: {
+			themes: {
+				light: {
+					primary: "#26262E", // dark blue
+					secondary: "#92897A", // light brown
+					accent: "#8CA4A5", // semi grey
+					success: "#2E8E7A", // green
+					info: "#EEF0ED", // semiwhite
+					warning: "#FB8C00",
+					error: "#FF5252",
+					anchor: "#2db696",
+				},
+			},
+			options: { customProperties: true },
+		},
+	} //opts includes, vuetify themes, icons, etc.
 
-	const opts = {} //opts includes, vuetify themes, icons, etc.
 	Vue.use(Vuetify)
 	Vue.use(VueDisqus)
 

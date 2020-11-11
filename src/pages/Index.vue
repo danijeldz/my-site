@@ -18,7 +18,7 @@ export default {
 		Contact,
 	},
 	metaInfo: {
-		title: "Hello, world!",
+		title: "Danijel Džankić, personal website",
 	},
 };
 </script>

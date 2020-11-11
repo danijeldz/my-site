@@ -1,11 +1,11 @@
 <template>
-	<section id="sectionContact">
+	<section id="sectionContact" class="home_section info">
 		<v-container>
 			<v-row>
 				<v-col cols="12" class="text-center"
 					><h1>Get in touch!</h1></v-col
 				>
-				<v-col cols="6" offset="3">
+				<v-col cols="12" md="6" offset-md="3">
 					<v-form
 						v-model="valid"
 						action="https://formspree.io/f/xqkgbpdq"
@@ -30,9 +30,9 @@
 						</v-textarea>
 						<div class="text-center">
 							<v-btn
-								color="primary"
+								color="success"
 								type="submit"
-								class="secondary--text"
+								class="info--text"
 								>Send</v-btn
 							>
 						</div>
@@ -43,9 +43,26 @@
 	</section>
 </template>
 
-<style>
-#sectionContact {
-	min-height: 50ch;
-	border: 1px solid green;
-}
-</style>
+<script>
+export default {
+	data: () => ({
+		valid: true,
+		name: "",
+		nameRules: [
+			(v) => !!v || "Name is required",
+			(v) =>
+				(v && v.length <= 10) || "Name must be less than 10 characters",
+		],
+		email: "",
+		emailRules: [
+			(v) => !!v || "E-mail is required",
+			(v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+		],
+	}),
+	methods: {
+		validate() {
+			this.$refs.form.validate();
+		},
+	},
+};
+</script>

@@ -1,77 +1,100 @@
 <template>
-	<section id="sectionAbout">
+	<section id="sectionAbout" class="home_section info">
 		<v-container>
 			<v-row>
 				<v-col cols="12" class="text-center my-2">
 					<h1>Who am I?</h1>
 				</v-col>
-				<v-col cols="12">
-					<v-card outlined style="height: 100%">
+				<v-col cols="12" lg="10" offset-lg="1">
+					<v-card style="height: 100%" class="primary info--text">
 						<v-container>
 							<v-row no-gutters>
 								<v-col cols="12" lg="4" md="4" sm="12">
-									<v-card
-										class="text-center blue-grey lighten-5"
-									>
-										<g-image
-											src="~/assets/images/danijel.png"
-											width="175"
-											class="rounded-circle mt-4"
-										/>
-										<v-card-title
-											class="justify-center flex-column"
+									<v-card class="text-center secondary">
+										<div
+											class="d-flex flex-column flex-sm-row flex-md-column"
 										>
-											<span
-												class="font-weight-bold d-block"
-												>Danijel Džankić</span
+											<div
+												class="flex-grow-0 pa-sm-4 pa-md-0"
 											>
-											<span>Frontend Developer</span>
-										</v-card-title>
-										<v-card-subtitle
-											><v-icon>mdi-map-marker</v-icon>
-											Lausanne,
-											Switzerland</v-card-subtitle
-										>
-										<v-divider></v-divider>
-										<v-card-text class="text-center pb-1">
-											Get in touch:
-										</v-card-text>
-										<v-card-actions
-											class="text-center justify-center pb-5"
-										>
-											<v-btn
-												fab
-												small
-												color="blue darken-1"
-												href="https://www.linkedin.com/in/danijeldzankic/"
+												<g-image
+													src="~/assets/images/danijel.png"
+													width="175"
+													class="rounded-circle mt-4"
+													style="opacity: 0.7"
+												/>
+											</div>
+											<div
+												class="d-flex flex-column flex-grow-1 pa-sm-4 pa-md-0"
 											>
-												<v-icon>mdi-linkedin</v-icon>
-											</v-btn>
-											<v-btn
-												fab
-												small
-												color="grey darken-3"
-												href="https://github.com/danijeldz/"
-											>
-												<v-icon color="white"
-													>mdi-github</v-icon
+												<v-card-title
+													class="justify-center flex-column flex-md-row"
 												>
-											</v-btn>
-											<v-btn
-												fab
-												small
-												color="grey lighten-2"
-												@click="
-													$vuetify.goTo(
-														'#sectionContact'
-													)
-												"
-											>
-												<v-icon
-													>mdi-message-outline</v-icon
+													<span
+														class="font-weight-bold"
+														>Danijel Džankić&nbsp;
+													</span>
+													<span
+														>Frontend
+														Developer</span
+													>
+												</v-card-title>
+												<v-card-subtitle
+													><v-icon
+														>mdi-map-marker</v-icon
+													>
+													Lausanne,
+													Switzerland</v-card-subtitle
 												>
-											</v-btn>
-										</v-card-actions>
+												<v-divider></v-divider>
+												<v-card-text
+													class="text-center pb-1"
+												>
+													Get in touch:
+												</v-card-text>
+												<v-card-actions
+													class="text-center justify-center pb-5"
+												>
+													<v-btn
+														fab
+														small
+														color="grey darken-3"
+														href="https://www.linkedin.com/in/danijeldzankic/"
+														target="_blank"
+													>
+														<v-icon
+															color="blue lighten-1"
+															>mdi-linkedin</v-icon
+														>
+													</v-btn>
+													<v-btn
+														fab
+														small
+														color="grey darken-3"
+														href="https://github.com/danijeldz/"
+														target="_blank"
+													>
+														<v-icon color="white"
+															>mdi-github</v-icon
+														>
+													</v-btn>
+													<v-btn
+														fab
+														small
+														color="grey darken-3"
+														@click="
+															$vuetify.goTo(
+																'#sectionContact'
+															)
+														"
+													>
+														<v-icon color="info"
+															>mdi-message-outline</v-icon
+														>
+													</v-btn>
+												</v-card-actions>
+											</div>
+										</div>
 									</v-card>
 									<!-- <div
 						v-for="asset in $static.assets.edges"
@@ -95,14 +118,13 @@
 											>
 											<v-divider></v-divider>
 											<v-list-item>
-												<v-list-item-content>
+												<v-list-item-content
+													class="info--text"
+												>
 													<div
 														class="subtitle-2 font-weight-bold"
 													>
-														<a
-															href="https://www.butlers.com/"
-															>BUTLERS GmbH</a
-														>
+														BUTLERS GmbH
 													</div>
 													<div class="body-2">
 														Frontend Dev -
@@ -113,16 +135,13 @@
 												</v-list-item-content>
 											</v-list-item>
 											<v-list-item>
-												<v-list-item-content>
+												<v-list-item-content
+													class="info--text"
+												>
 													<div
 														class="subtitle-2 font-weight-bold"
 													>
-														<a
-															href="https://www.thekase.com/"
-														>
-															THE KASE GERMANY
-															GmbH</a
-														>
+														THE KASE GERMANY GmbH
 													</div>
 													<div class="body-2">
 														Web Dev -
@@ -133,7 +152,9 @@
 												</v-list-item-content>
 											</v-list-item>
 											<v-list-item>
-												<v-list-item-content>
+												<v-list-item-content
+													class="info--text"
+												>
 													<div
 														class="subtitle-2 font-weight-bold"
 													>
@@ -148,16 +169,13 @@
 												</v-list-item-content>
 											</v-list-item>
 											<v-list-item>
-												<v-list-item-content>
+												<v-list-item-content
+													class="info--text"
+												>
 													<div
 														class="subtitle-2 font-weight-bold"
 													>
-														<a
-															href="https://www.omega-software.hr"
-														>
-															Omega software
-															d.o.o.</a
-														>
+														Omega software d.o.o.
 													</div>
 													<div class="body-2">
 														Junior Consultant -
@@ -188,7 +206,9 @@
 												>
 												<v-divider></v-divider>
 												<v-list-item>
-													<v-list-item-content>
+													<v-list-item-content
+														class="info--text"
+													>
 														<div
 															class="subtitle-2 font-weight-bold"
 														>
@@ -208,8 +228,9 @@
 											>
 												<v-btn
 													small
-													color="accent"
-													to="/about-me/"
+													color="info"
+													to="/cv/"
+													class="primary--text"
 													>See full Resume</v-btn
 												>
 											</v-card-actions>
@@ -252,10 +273,3 @@ export default {
 	},
 };
 </script>
-
-<style>
-#sectionAbout {
-	min-height: 50vh;
-	border: 1px solid red;
-}
-</style>
