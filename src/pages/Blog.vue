@@ -36,8 +36,6 @@ query Posts($page: Int) {
 			id 
 			title 
 			description
-			# timeToRead 
-			# excerpt 
 			path 
 			date(format:  "MMMM D, Y") 
 			} 
