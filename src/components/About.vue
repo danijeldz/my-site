@@ -23,6 +23,8 @@
 												width="175"
 												class="rounded-circle mt-4"
 												style="opacity: 0.7"
+												alt="Danijel's profile image"
+												title="Danijel Džankić"
 											/>
 										</div>
 										<div
