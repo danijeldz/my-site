@@ -3,13 +3,33 @@
 		<v-container>
 			<v-row>
 				<v-col
-					class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
+					class="blog_posts col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 				>
 					<h1>Blog</h1>
-					<div v-for="post in $page.posts.edges" :key="post.node.id">
-						<h2>{{ post.node.title }}</h2>
-						<p>{{ post.node.description }}</p>
-						<g-link :to="post.node.path">Read more</g-link>
+					<div
+						class="mb-4"
+						v-for="post in $page.posts.edges"
+						:key="post.node.id"
+					>
+						<a :href="post.node.path">
+							<h2>{{ post.node.title }}</h2>
+						</a>
+
+						<div class="mb-2 body-2">
+							<v-icon small class="mr-1"
+								>mdi-clock-time-two-outline</v-icon
+							>
+							<span
+								>{{ calcTimeToRead(post.node.body.length) }} min
+								read</span
+							>
+							&nbsp;
+							<v-icon small class="mr-1">mdi-lead-pencil</v-icon>
+							<span>{{ post.node.date }}</span>
+						</div>
+						<div v-html="post.node.description"></div>
+
+						<g-link :to="post.node.path">read more</g-link>
 					</div>
 				</v-col>
 			</v-row>
@@ -31,7 +51,8 @@ query Posts($page: Int) {
 			id 
 			title 
 			description
-			path 
+			path
+			body 
 			date(format:  "MMMM D, Y") 
 			} 
 		} 
@@ -46,10 +67,18 @@ export default {
 	components: {
 		Pager,
 	},
+	methods: {
+		calcTimeToRead(val) {
+			return Math.ceil(val / 5 / 200);
+		},
+	},
 };
 </script>
 
 <style>
+.blog_posts h2 {
+	line-height: 1em;
+}
 .pagination {
 	text-align: center;
 	font-size: 1.5em;

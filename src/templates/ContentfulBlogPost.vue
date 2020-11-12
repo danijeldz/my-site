@@ -42,5 +42,10 @@ export default {
 			return md.render(this.$page.Post.body);
 		},
 	},
+	methods: {
+		calcTimeToRead(val) {
+			return Math.ceil(val / 5 / 200);
+		},
+	},
 };
 </script>
