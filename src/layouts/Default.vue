@@ -59,11 +59,7 @@
 				>
 					Code
 				</v-btn>
-				<v-btn
-					@click="scrollRouter('#sectionContact')"
-					text
-					class="text-capitalize info--text"
-				>
+				<v-btn text class="text-capitalize info--text" to="/contact">
 					Contact
 				</v-btn>
 			</v-toolbar-items>

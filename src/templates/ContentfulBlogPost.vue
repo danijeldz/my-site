@@ -26,7 +26,9 @@ query($id: ID!) {
 
 <script>
 import MarkdownIt from "markdown-it";
+
 export default {
+	name: "BlogPost",
 	metaInfo() {
 		return {
 			title: this.$page.Post.title,

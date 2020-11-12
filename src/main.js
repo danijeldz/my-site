@@ -3,10 +3,11 @@
 import Vuetify from "vuetify"
 import "vuetify/dist/vuetify.min.css"
 import DefaultLayout from "~/layouts/Default.vue"
+
 import "~/assets/styles.css"
 import VueDisqus from "vue-disqus"
 
-export default function(Vue, { router, head, isClient, appOptions }) {
+export default function(Vue, { appOptions, head }) {
 	head.link.push({
 		rel: "stylesheet",
 		href: "https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css",
@@ -14,8 +15,14 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 
 	head.link.push({
 		rel: "stylesheet",
+		href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900",
+	})
+
+	head.link.push({
+		rel: "stylesheet",
 		href: "https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap",
 	})
+
 	const opts = {
 		iconfont: "md",
 		theme: {
@@ -31,15 +38,13 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 					anchor: "#2db696",
 				},
 			},
-			options: { customProperties: true },
 		},
 	} //opts includes, vuetify themes, icons, etc.
-
 	Vue.use(Vuetify)
-	Vue.use(VueDisqus)
 
 	appOptions.vuetify = new Vuetify(opts)
 
 	// Set default layout as a global component
 	Vue.component("Layout", DefaultLayout)
+	Vue.use(VueDisqus)
 }

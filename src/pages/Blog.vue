@@ -29,7 +29,7 @@
 
 <page-query>
 query Posts($page: Int) { 
-	posts: allContentfulBlogPost(sortBy: "date", order:  DESC, perPage: 2, page: $page) 
+	posts: allContentfulBlogPost(sortBy: "date", order:  DESC, perPage: 3, page: $page) 
 	@paginate { totalCount pageInfo { totalPages  currentPage } 
 	edges { 
 		node { 
@@ -48,9 +48,6 @@ query Posts($page: Int) {
 import { Pager } from "gridsome";
 
 export default {
-	metInfo: {
-		title: "Blog",
-	},
 	components: {
 		Pager,
 	},
