@@ -29,10 +29,6 @@
 						<div
 							class="d-flex justify-space-between flex-column flex-grow-1"
 						>
-							<!-- <v-card-title
-								class="subtitle-1"
-								v-text="project.title"
-							></v-card-title> -->
 							<div
 								v-text="project.node.title"
 								class="subtitle-1 ml-2 mt-2"
@@ -89,42 +85,7 @@
 <script>
 export default {
 	data() {
-		return {
-			projects: [
-				{
-					title: "Project 1",
-					description: "Lorem",
-					stack: ["Vue.js", "FIrebase", "Vuetify"],
-					demo: "https://www.danijeldzankic.com",
-					repo: "https://www.github.com",
-					coverImage: "https://via.placeholder.com/150",
-				},
-				{
-					title: "Project 2",
-					description: "Lorem",
-					stack: ["Vue.js", "FIrebase", "Vuetify"],
-					demo: "https://www.danijeldzankic.com",
-					repo: "https://www.github.com",
-					coverImage: "https://via.placeholder.com/150",
-				},
-				{
-					title: "Project 3",
-					description: "Lorem",
-					stack: ["Vue.js", "FIrebase", "Vuetify"],
-					demo: "https://www.danijeldzankic.com",
-					repo: "https://www.github.com",
-					coverImage: "https://via.placeholder.com/150",
-				},
-				{
-					title: "Project 4",
-					description: "Lorem",
-					stack: ["Vue.js", "FIrebase", "Vuetify"],
-					demo: "https://www.danijeldzankic.com",
-					repo: "https://www.github.com",
-					coverImage: "https://via.placeholder.com/150",
-				},
-			],
-		};
+		return {};
 	},
 };
 </script>
