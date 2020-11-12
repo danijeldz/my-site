@@ -3,7 +3,9 @@
 		<section id="sectionCV">
 			<v-container>
 				<v-row>
-					<v-col cols="12" offset="0" md="8" offset-md="2">
+					<v-col
+						class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
+					>
 						<h1>{{ this.$page.person.name }}</h1>
 						<p class="subtitle-1">{{ this.$page.person.title }}</p>
 						<div v-html="content"></div>

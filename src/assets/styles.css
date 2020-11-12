@@ -52,7 +52,11 @@ h6 {
 
 /* Layout */
 
+body {
+	overflow: hidden;
+}
+
 .home_section {
 	min-height: 50vh;
-	padding: 2em 0;
+	padding: 1em 0;
 }

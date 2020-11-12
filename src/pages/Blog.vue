@@ -3,12 +3,7 @@
 		<v-container>
 			<v-row>
 				<v-col
-					sm="12"
-					md="8"
-					lg="6"
-					offset-sm="0"
-					offset-md="2"
-					offset-lg="3"
+					class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 				>
 					<h1>Blog</h1>
 					<div v-for="post in $page.posts.edges" :key="post.node.id">

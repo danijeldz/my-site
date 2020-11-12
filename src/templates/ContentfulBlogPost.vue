@@ -2,7 +2,9 @@
 	<layout>
 		<v-container>
 			<v-row>
-				<v-col cols="8" offset="2">
+				<v-col
+					class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
+				>
 					<h1>{{ $page.Post.title }}</h1>
 					<div v-html="content" />
 					<Disqus

@@ -13,19 +13,34 @@
 					active-class="accent--text text--accent-4"
 				>
 					<v-list-item>
-						<v-list-item-title>Foo</v-list-item-title>
+						<v-list-item-title>
+							<g-link to="/">Home</g-link>
+						</v-list-item-title>
 					</v-list-item>
 
 					<v-list-item>
-						<v-list-item-title>Bar</v-list-item-title>
+						<v-list-item-title>
+							<g-link to="/blog">Blog</g-link>
+						</v-list-item-title>
 					</v-list-item>
 
 					<v-list-item>
-						<v-list-item-title>Fizz</v-list-item-title>
+						<v-list-item-title>
+							<g-link to="/cv">CV</g-link>
+						</v-list-item-title>
 					</v-list-item>
 
 					<v-list-item>
-						<v-list-item-title>Buzz</v-list-item-title>
+						<v-list-item-title
+							@click="scrollRouter('#sectionProjects')"
+						>
+							Projects
+						</v-list-item-title>
+					</v-list-item>
+					<v-list-item>
+						<v-list-item-title>
+							<g-link to="/contact/">Contact</g-link>
+						</v-list-item-title>
 					</v-list-item>
 				</v-list-item-group>
 			</v-list>
@@ -49,7 +64,6 @@
 					>Blog</v-btn
 				>
 				<v-btn text class="text-capitalize info--text" to="/cv/">
-					<!-- <g-link to="/about-me/">About Me</g-link> -->
 					CV
 				</v-btn>
 				<v-btn
@@ -64,12 +78,12 @@
 				</v-btn>
 			</v-toolbar-items>
 			<v-app-bar-nav-icon
-				class="d-flex d-md-none"
+				class="d-flex d-md-none info--text"
 				@click.stop="drawer = !drawer"
 			></v-app-bar-nav-icon>
 		</v-app-bar>
 
-		<v-main>
+		<v-main class="info">
 			<slot />
 		</v-main>
 

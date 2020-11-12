@@ -5,7 +5,9 @@
 				<v-col cols="12" class="text-center"
 					><h1>Get in touch!</h1></v-col
 				>
-				<v-col cols="12" md="6" offset-md="3">
+				<v-col
+					class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3"
+				>
 					<v-form
 						v-model="valid"
 						action="https://formspree.io/f/xqkgbpdq"

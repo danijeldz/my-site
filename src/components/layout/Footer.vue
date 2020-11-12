@@ -4,7 +4,7 @@
 		padless
 		absolute
 		color="primary darken-1"
-		class="info--text py-2"
+		class="info--text pt-4"
 	>
 		<v-row>
 			<v-col cols="12" class="text-center text--info">
@@ -39,10 +39,12 @@
 				</v-btn>
 			</v-col>
 			<v-col cols="12" class="text-center">
-				<small>
+				<p>
 					© {{ getCurrentYear }}
 					<strong>Danijel Džankić</strong>
-					- Powered by
+				</p>
+				<p>
+					Powered by
 					<a href="https://gridsome.org" target="_blank">Gridsome</a>,
 					<a href="https://www.netlify.com" target="_blank"
 						>Netlify</a
@@ -51,7 +53,7 @@
 					<a href="https://www.contentful.com/" target="_blank"
 						>Contentful</a
 					>
-				</small>
+				</p>
 			</v-col>
 		</v-row>
 	</v-footer>
