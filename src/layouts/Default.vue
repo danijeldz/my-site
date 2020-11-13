@@ -5,43 +5,92 @@
 			class="d-flex d-md-none"
 			v-model="drawer"
 			temporary
+			color="info"
 			right
 		>
 			<v-list nav dense>
+				<v-list-item>
+					<v-list-item-avatar class="d-flex justify-center">
+						<g-image
+							src="~/assets/images/danijel.png"
+							width="50"
+							alt="Danijel's avatar"
+							class="justify-self-center"
+						></g-image>
+					</v-list-item-avatar>
+					<v-list-item-content>
+						<v-list-item-title>
+							<g-link
+								to="/"
+								class="primary--text yanone subtitle-1 text-decoration-none"
+							>
+								<span class="font-weight-light">Danijel </span>
+								<span class="font-weight-medium">Džankić</span>
+							</g-link>
+						</v-list-item-title>
+					</v-list-item-content>
+				</v-list-item>
+				<v-divider></v-divider>
 				<v-list-item-group
 					v-model="group"
 					active-class="accent--text text--accent-4"
 				>
-					<v-list-item>
-						<v-list-item-title>
-							<g-link to="/">Home</g-link>
-						</v-list-item-title>
+					<v-list-item to="/">
+						<v-list-item-icon>
+							<v-icon> mdi-home-variant-outline </v-icon>
+						</v-list-item-icon>
+						<v-list-item-title> Home </v-list-item-title>
 					</v-list-item>
 
-					<v-list-item>
-						<v-list-item-title>
-							<g-link to="/blog">Blog</g-link>
-						</v-list-item-title>
+					<v-list-item to="/blog/">
+						<v-list-item-icon>
+							<v-icon> mdi-post-outline </v-icon>
+						</v-list-item-icon>
+						<v-list-item-title> Blog </v-list-item-title>
 					</v-list-item>
 
-					<v-list-item>
-						<v-list-item-title>
-							<g-link to="/cv">CV</g-link>
-						</v-list-item-title>
+					<v-list-item to="/cv/">
+						<v-list-item-icon>
+							<v-icon> mdi-file-account-outline </v-icon>
+						</v-list-item-icon>
+						<v-list-item-title> CV </v-list-item-title>
 					</v-list-item>
 
-					<v-list-item>
-						<v-list-item-title
-							@click="scrollRouter('#sectionProjects')"
-						>
-							Projects
-						</v-list-item-title>
+					<v-list-item @click="scrollRouter('#sectionProjects')">
+						<v-list-item-icon>
+							<v-icon> mdi-apps </v-icon>
+						</v-list-item-icon>
+						<v-list-item-title> Projects </v-list-item-title>
 					</v-list-item>
-					<v-list-item>
-						<v-list-item-title>
-							<g-link to="/contact/">Contact</g-link>
-						</v-list-item-title>
+					<v-list-item to="/contact/">
+						<v-list-item-icon>
+							<v-icon> mdi-human-greeting </v-icon>
+						</v-list-item-icon>
+						<v-list-item-title> Contact </v-list-item-title>
 					</v-list-item>
+				</v-list-item-group>
+				<v-divider></v-divider>
+				<v-list-item-group class="d-flex flex-row justify-center my-4">
+					<v-btn
+						fab
+						small
+						color="grey darken-3"
+						href="https://github.com/danijeldz/"
+						class="mx-3"
+						target="_blank"
+					>
+						<v-icon color="accent">mdi-github</v-icon>
+					</v-btn>
+					<v-btn
+						fab
+						small
+						color="grey darken-3"
+						href="https://www.linkedin.com/in/danijeldzankic/"
+						class="mx-3"
+						target="_blank"
+					>
+						<v-icon color="blue lighten-1">mdi-linkedin</v-icon>
+					</v-btn>
 				</v-list-item-group>
 			</v-list>
 		</v-navigation-drawer>
