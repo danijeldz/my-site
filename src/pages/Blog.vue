@@ -6,6 +6,7 @@
 					class="blog_posts col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 				>
 					<h1>Blog</h1>
+					<v-divider class="mb-6"></v-divider>
 					<div
 						class="mb-4"
 						v-for="post in $page.posts.edges"
@@ -16,7 +17,7 @@
 						</a>
 
 						<div class="mb-2 body-2">
-							<v-icon small class="mr-1"
+							<v-icon small class="mr-1" color="secondary"
 								>mdi-clock-time-two-outline</v-icon
 							>
 							<span
@@ -24,12 +25,23 @@
 								read</span
 							>
 							&nbsp;
-							<v-icon small class="mr-1">mdi-lead-pencil</v-icon>
+							<v-icon small class="mr-1" color="secondary"
+								>mdi-lead-pencil</v-icon
+							>
 							<span>{{ post.node.date }}</span>
 						</div>
 						<div v-html="post.node.description"></div>
 
-						<g-link :to="post.node.path">read more</g-link>
+						<g-link
+							:to="post.node.path"
+							class="text-decoration-none"
+						>
+							<v-icon small class="mr-1" color="secondary"
+								>mdi-subdirectory-arrow-right</v-icon
+							><span class="text-decoration-underline"
+								>read more</span
+							>
+						</g-link>
 					</div>
 				</v-col>
 			</v-row>

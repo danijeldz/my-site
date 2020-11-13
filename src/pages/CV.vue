@@ -8,6 +8,7 @@
 					>
 						<h1>{{ this.$page.person.name }}</h1>
 						<p class="subtitle-1">{{ this.$page.person.title }}</p>
+						<v-divider class="mb-6"></v-divider>
 						<div v-html="content"></div>
 					</v-col>
 				</v-row>

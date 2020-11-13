@@ -7,6 +7,7 @@
 						class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 					>
 						<h1>Contact</h1>
+						<v-divider class="mb-6"></v-divider>
 						<v-form
 							v-model="valid"
 							action="https://formspree.io/f/xqkgbpdq"
