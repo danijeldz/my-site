@@ -9,24 +9,18 @@
 			right
 		>
 			<v-list nav dense>
-				<v-list-item>
-					<v-list-item-avatar class="d-flex justify-center">
-						<g-image
-							src="~/assets/images/danijel.png"
-							width="50"
-							alt="Danijel's avatar"
-							class="justify-self-center"
-						></g-image>
-					</v-list-item-avatar>
+				<v-list-item to="/">
 					<v-list-item-content>
-						<v-list-item-title>
-							<g-link
-								to="/"
-								class="primary--text yanone subtitle-1 text-decoration-none"
+						<v-list-item-title
+							class="text-center"
+							style="font-size: 1.5em; line-height: inherit"
+						>
+							<span class="font-weight-light yanone heading"
+								>Danijel
+							</span>
+							<span class="font-weight-medium yanone"
+								>Džankić</span
 							>
-								<span class="font-weight-light">Danijel </span>
-								<span class="font-weight-medium">Džankić</span>
-							</g-link>
 						</v-list-item-title>
 					</v-list-item-content>
 				</v-list-item>
@@ -181,8 +175,7 @@ query {
 
 <style>
 body {
-	font-family: -apple-system, system-ui, Roboto, BlinkMacSystemFont,
-		"Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-family: -apple-system, "Helvetica", "Segoe UI", "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
