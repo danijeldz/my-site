@@ -4,10 +4,14 @@
 			<v-container>
 				<v-row>
 					<v-col
-						class="col-xs-12 offset-xs-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
+						class="col-xs-12 offset-xs-0 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 					>
 						<h1>Contact</h1>
 						<v-divider class="mb-6"></v-divider>
+					</v-col>
+					<v-col
+						class="col-xs-12 offset-xs-0 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4"
+					>
 						<v-form
 							v-model="valid"
 							action="https://formspree.io/f/xqkgbpdq"
