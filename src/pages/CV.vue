@@ -26,7 +26,7 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: this.name,
+			title: "Curriculum Vitae",
 		};
 	},
 	computed: {

@@ -67,5 +67,8 @@ export default {
 			this.$refs.form.validate();
 		},
 	},
+	metaInfo: {
+		title: "Say Hi!",
+	},
 };
 </script>

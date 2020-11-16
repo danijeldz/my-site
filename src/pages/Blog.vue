@@ -84,6 +84,9 @@ export default {
 			return Math.ceil(val / 5 / 200);
 		},
 	},
+	metaInfo: {
+		title: "Blog",
+	},
 };
 </script>
 
