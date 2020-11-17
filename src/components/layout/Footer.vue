@@ -1,11 +1,5 @@
 <template>
-	<v-footer
-		app
-		padless
-		absolute
-		color="primary darken-1"
-		class="info--text pt-4"
-	>
+	<v-footer app padless absolute color="primary" class="info--text pt-4">
 		<v-row>
 			<v-col cols="12" class="text-center text--info">
 				<v-btn

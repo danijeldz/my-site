@@ -64,3 +64,10 @@ body {
 	min-height: 50vh;
 	padding: 1em 0;
 }
+
+/* Breakpoint Medium + */
+@media screen and (min-width: 960px) {
+	.home_section {
+		padding: 4em 0;
+	}
+}

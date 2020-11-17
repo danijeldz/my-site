@@ -8,7 +8,10 @@
 				<v-col
 					class="col-xs-12 offset-xs-0 col-lg-10 offset-lg-1 col-xl-6 offset-xl-3"
 				>
-					<v-card style="height: 100%" class="primary info--text">
+					<v-card
+						style="height: 100%"
+						class="primary lighten-1 info--text"
+					>
 						<v-row class="px-3">
 							<v-col cols="12" lg="4" md="4" sm="12">
 								<v-card class="text-center secondary">

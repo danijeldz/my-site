@@ -89,7 +89,7 @@
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-app-bar app elevate-on-scroll color="primary darken-1">
+		<v-app-bar app elevate-on-scroll color="primary darken">
 			<v-toolbar-title class="d-md-flex align-center">
 				<g-link to="/" class="d-flex align-center info--text">
 					<span class="font-weight-light">Danijel</span>
