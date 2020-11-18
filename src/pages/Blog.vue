@@ -1,9 +1,9 @@
 <template>
 	<Layout>
 		<v-container>
-			<v-row>
+			<v-row class="flex-column flex-nowrap">
 				<v-col
-					class="col-xs-12 offset-xs-0 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
+					class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 				>
 					<h1>Blog</h1>
 					<v-divider class="mb-6"></v-divider>
@@ -34,7 +34,7 @@
 							>
 							<span>{{ post.node.date }}</span>
 						</div>
-						<div v-html="post.node.description"></div>
+						<div v-html="content(post.node.description)"></div>
 
 						<g-link
 							:to="post.node.path"
@@ -78,6 +78,7 @@ query Posts($page: Int) {
 
 <script>
 import { Pager } from "gridsome";
+import MarkdownIt from "markdown-it";
 
 export default {
 	components: {
@@ -86,6 +87,10 @@ export default {
 	methods: {
 		calcTimeToRead(val) {
 			return Math.ceil(val / 5 / 200);
+		},
+		content(markdown) {
+			const md = new MarkdownIt();
+			return md.render(markdown);
 		},
 	},
 	metaInfo: {

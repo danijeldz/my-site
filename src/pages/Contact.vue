@@ -2,9 +2,9 @@
 	<Layout>
 		<section>
 			<v-container>
-				<v-row>
+				<v-row class="flex-column flex-nowrap">
 					<v-col
-						class="col-xs-12 offset-xs-0 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
+						class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 					>
 						<h1>Contact</h1>
 						<v-divider class="mb-6"></v-divider>
