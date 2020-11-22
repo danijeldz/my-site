@@ -193,8 +193,9 @@
 												color="white"
 											></v-divider>
 											<v-card-text
-												>Vue.js, ES6, HTML5, CSS3,
-												GraphQL, Firebase, Vuetify,
+												>Vue.js, Vuex, Vuetify, ES6,
+												Typescript, Node.js, HTML5,
+												CSS3, GraphQL, Firebase,
 												MaterializeCSS, SFCC, Wordpress,
 												Gridsome, Contentful
 												CMS</v-card-text
