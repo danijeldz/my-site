@@ -17,3 +17,11 @@
 		</v-container>
 	</Layout>
 </template>
+
+<script>
+export default {
+	metaInfo: {
+		title: "404 - Page not found",
+	},
+};
+</script>

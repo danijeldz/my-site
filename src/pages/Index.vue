@@ -18,7 +18,7 @@ export default {
 		Contact,
 	},
 	metaInfo: {
-		title: "Home, sweet home",
+		title: "Personal Website",
 	},
 };
 </script>

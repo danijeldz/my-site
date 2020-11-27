@@ -72,7 +72,7 @@ export default {
 		},
 	},
 	metaInfo: {
-		title: "Say Hi!",
+		title: "Contact",
 	},
 };
 </script>
